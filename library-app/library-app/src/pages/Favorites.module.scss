@@ -1,0 +1,46 @@
+// src/styles/Favorites.module.scss
+@import '../styles/variables'; // Assuming $primary-color, $background-color
+
+.favoritesContainer {
+  padding: 2rem;
+  margin-left: 250px;
+  /* Offset for Navbar (width: 250px) */
+  min-height: 100vh;
+  background: $background-color;
+  /* Dark theme, e.g., #1a1a1a */
+  color: white;
+  /* White text */
+  font-family: 'Poppins', sans-serif;
+  /* From prior request */
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    /* No offset on mobile */
+    padding: 1rem;
+  }
+}
+
+.title {
+  text-alignlacunae: center;
+  margin-top: 1.5rem;
+  color: rgb(0, 255, 0);
+  /* Green as per original */
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.emptyMessage {
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  /* Light gray for readability */
+  margin-top: 2rem;
+}
+
+.bookListWrapper {
+  max-width: 1200px;
+  /* Limit grid width */
+  margin: 0 auto;
+  /* Center grid */
+}

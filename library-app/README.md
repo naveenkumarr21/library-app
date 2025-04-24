@@ -1,54 +1,66 @@
-# React + TypeScript + Vite
+# Library App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The **Library App** is a React-based application that allows users to browse, search, and manage a collection of books. Users can perform advanced searches, view book details, and manage their favorite books.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Home Page**: Displays a list of all books in the library.
+- **Search**: Search for books by title with pagination support.
+- **Advanced Search**: Filter books by title, ISBN, page count, status, author, and categories.
+- **Favorites**: Add or remove books from the favorites list.
+- **Responsive Design**: Fully responsive UI for desktop and mobile devices.
+- **State Management**: Uses Redux for managing the state of books and favorites.
+- **Animations**: Smooth animations using Framer Motion.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: React, TypeScript, SCSS
+- **State Management**: Redux Toolkit
+- **Routing**: React Router
+- **Animations**: Framer Motion
+- **Build Tool**: Vite
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Features in Detail:
+
+1.Home Page
+Displays all books in a grid layout.
+Each book is represented by a card with its title, author, and thumbnail.
+
+2.Search
+Search for books by title.
+Pagination support for navigating through results.
+
+
+3.Advanced Search
+Filter books by:
+Title
+ISBN
+Page count
+Status (e.g., Published, MEAP)
+Author
+Categories
+Dropdown for selecting multiple categories.
+
+
+
+4.Favorites
+Add books to the favorites list.
+View and manage favorite books.
+
+5.Styling
+SCSS: Modular SCSS is used for styling components.
+Variables: Centralized SCSS variables for colors, spacing, and breakpoints.
+
+
+6.State Management
+Redux Toolkit: Manages the state of books and favorites.
+Slices:
+bookSlice: Handles books and favorites.
+
+
+7.Animations
+Framer Motion: Adds smooth animations to components like book cards and modals.

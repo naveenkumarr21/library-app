@@ -1,0 +1,64 @@
+@import '../styles/variables';
+
+.bookList {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto; // Center the container
+  padding: 2rem 1rem; // Equal padding on sides
+
+  @media (max-width: 768px) {
+    padding-right: px;
+  }
+}
+
+.bookGrid {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center; // Center the grid items
+
+  // 3 cards per row
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1200px; // Constrain max width
+  margin: 0 auto; // Center the grid
+
+  // 2 cards on medium screens
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  // 1 card on mobile
+  @media (max-width: 600px) {
+    grid-template-columns: minmax(250px, 1fr);
+  }
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #f8f9fa;
+  border-radius: 8px;
+
+  .emptyIcon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.card {
+  width: 250px;
+  height: 350px; // fixed height
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

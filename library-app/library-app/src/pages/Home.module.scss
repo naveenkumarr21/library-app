@@ -1,0 +1,15 @@
+@import '../styles/variables';
+
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+h2 {
+  color: $text-color;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}

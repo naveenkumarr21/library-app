@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    background: #000000;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: #ff6b6b;
+        border-radius: 2px;
+    }
+}
+
+// Form styling with gaps
+.form-control {
+    border: 2px solid #333333;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    background: #1a1a1a;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    color: #ffffff;
+    margin-bottom: 1.5rem; // Increased gap between form fields
+
+    &:focus {
+        border-color: #ff6b6b;
+        box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+        outline: none;
+    }
+
+    &::placeholder {
+        color: #666666;
+        opacity: 1;
+    }
+}
+
+// Form group styling with consistent gaps
+.form-group {
+    margin-bottom: 2rem; // Increased gap between form groups
+    position: relative;
+
+    label {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #e0e0e0;
+        margin-bottom: 0.75rem;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    &:focus-within label {
+        color: #ff6b6b;
+    }
+}
+
+// Dropdown styling with gaps
+.dropdown {
+    position: relative;
+    margin-bottom: 1.5rem; // Consistent gap for dropdown
+    
+    &-toggle {
+        cursor: pointer;
+        background: #1a1a1a;
+        text-align: left;
+        border: 2px solid #333333;
+        border-radius: 10px;
+        padding: 12px 16px;
+        font-size: 0.95rem;
+        color: #ffffff;
+        transition: all 0.3s ease;
+        width: 100%;
+        margin-bottom: 0.5rem;
+        
+        &:hover {
+            border-color: #444444;
+        }
+        
+        &::after {
+            margin-left: auto;
+            color: #666666;
+        }
+    }
+    
+    &-menu {
+        border: 2px solid #333333;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        background: #1a1a1a;
+    }
+}
+
+// Checkbox styling with proper spacing
+.form-check {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0; // Increased padding for better spacing
+    margin-bottom: 0;
+    
+    &-input {
+        width: 18px;
+        height: 18px;
+        border: 2px solid #444444;
+        border-radius: 4px;
+        margin-right: 0.75rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        appearance: none;
+        position: relative;
+        background-color: #1a1a1a;
+        
+        &:checked {
+            background-color: #ff6b6b;
+            border-color: #ff6b6b;
+            
+            &::after {
+                content: '✓';
+                position: absolute;
+                color: white;
+                font-size: 12px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        
+        &:focus {
+            box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+        }
+    }
+    
+    &-label {
+        font-size: 0.9rem;
+        color: #e0e0e0;
+        cursor: pointer;
+        user-select: none;
+        transition: color 0.2s ease;
+    }
+
+    &:hover &-label {
+        color: #ffffff;
+    }
+}
+
+// Selected categories display with spacing
+.selected-categories {
+    font-size: 0.85rem;
+    color: #aaaaaa;
+    margin: 0.5rem 0 1.5rem 0; // Added margin top and bottom
+    padding: 0.75rem;
+    background: #333333;
+    border-radius: 6px;
+    border-left: 3px solid #ff6b6b;
+}
+
+// Grid layout with consistent gaps
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 7rem; // Increased gap between columns
+    margin-bottom: 2rem;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    h4 {
+        font-size: 1.75rem;
+    }
+    
+    .row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem; // Adjusted gap for mobile
+    }
+
+    .form-control, 
+    .form-group,
+    .dropdown {
+        margin-bottom: 1.25rem; // Slightly reduced gaps for mobile
+    }
+}
