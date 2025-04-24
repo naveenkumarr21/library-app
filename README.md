@@ -64,3 +64,31 @@ bookSlice: Handles books and favorites.
 
 7.Animations
 Framer Motion: Adds smooth animations to components like book cards and modals.
+
+
+
+Screenshots:
+
+Laptop
+
+![Screenshot (1119)](https://github.com/user-attachments/assets/a37048b4-645e-4f63-8225-1c5067be9c3a)
+
+
+Popup Card with Bg Blur and Implemented Z-index
+![Screenshot (1120)](https://github.com/user-attachments/assets/7d40f860-d61a-484f-837e-f43bb7fa3517)
+
+
+
+Sidebar Expand and collapse
+![Screenshot (1121)](https://github.com/user-attachments/assets/eac04d10-d298-45fe-98e6-89f3668bc19c)
+
+
+Mobile Screen
+![Screenshot (1123)](https://github.com/user-attachments/assets/953a2f35-50ce-434f-999f-4b11b419da38)
+
+
+
+
+
+
+
